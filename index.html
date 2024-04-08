@@ -3,22 +3,220 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chess</title>
+  <title>CastleCheck</title>
 
-  <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Chess Logo -->
+  <link rel="icon" type="image/jpg" href="assets/logo.jpg">
 
-  <!-- Custom Css Styles -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-  <section id="gameboard"></section>
-  <p>It is <span id="player"></span>'s go.</p>
-  <p id="info-display"></p>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/button.css">
   
-  <script src="pieces.js"></script>
-  <script src="app.js"></script>
+
+</head>
+<body class="bg-primary">
+  
+  <!-- Header -->
+  <header class="header">
+    <nav class="navigation">
+       <!-- Logo -->
+      <a href="#" class="navigation__nav-logo">
+        <img src="assets/logo-sample.svg" alt="">
+      </a>
+      <ul role="list" class="navigation__nav-links">
+        <li><a href="" class="navigation__nav-link">Home</a></li>
+        <li><a href="" class="navigation__nav-link">Tournament</a></li>
+        <li><a href="" class="navigation__nav-link">Practice</a></li>
+        <li><a href="" class="navigation__nav-link">News</a></li>
+      </ul>
+      <button class="btn btn-primary">Sign In</button>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1 class="h1-enhance">Chess Brings Great Idea To Life</h1>
+      <p class="text-uppercase">The Castle Check Website Is Your One Stop Chess Shop And Gaming Zone</p>
+      <div class="btn-group">
+        <button class="btn btn-primary">Get Started</button>
+        <button class="btn btn-primary-outline">Talk to Us</button>
+      </div>
+      <div class="hero-image-container">
+        <img src="assets/hero-image.png" alt="">
+      </div>
+    </section>
+
+    <!-- Weekly Tournament Section -->
+    <section class="weekly-tournament-section">
+      <h1 class="h1-enhance clr-accent">Weekly Tournaments</h1>
+      <p class="sub-title text-uppercase">Registration Now For Upcoming Tournament Or Batch Live Tournament.</p>
+      <div class="grid grid-3">
+
+        <div class="chess-box">
+          <div class="chess-box__container">
+            <div class="chess-box__weekly-content">
+              <p class="chess-box__week-content__weekly-article">Fide Candidates Chess Tournament</p>
+              <p class="chess-box__week-content__weekly-schedule">Jun 12 2022 Jul 04 2022</p>
+            </div>
+            <img src="assets/knight-1.png" alt="">
+          </div>
+        </div>
+
+        <div class="chess-box">
+          <div class="chess-box__container">
+            <div class="chess-box__weekly-content">
+              <p class="chess-box__week-content__weekly-article">Rapid Chess Championship</p>
+              <p class="chess-box__week-content__weekly-schedule">Jul 10 2022 Jul 15 2022</p>
+            </div>
+            <img src="assets/knight-2.png" alt="">
+          </div>
+        </div>
+
+
+        <div class="chess-box">
+          <div class="chess-box__container">
+            <div class="chess-box__weekly-content">
+              <p class="chess-box__week-content__weekly-article">Youth Chess Championships</p>
+              <p class="chess-box__week-content__weekly-schedule">Jun 12 2022 Jul 16 2022</p>
+            </div>
+            <img src="assets/knight-3.png" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <button class="btn btn-primary">See All</button>
+
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section">
+      <h1 class="h1-enhance">Featured Products</h1>
+      <nav class="featured__nav-links">
+        <ul role="list" class="text-uppercase">
+          <li><a href="#" class="selected">Chess Board</a></li>
+          <li><a href="#">Table Set</a></li>
+          <li><a href="#">Chess Clock</a></li>
+          <li><a href="#">Chess Bag</a></li>
+          <li><a href="#">See All</a></li>
+        </ul>
+      </nav>
+
+      <div class="chessboard-set-container | grid grid-4">
+
+        <div class="chess-board-container">
+          <div class="chess-board-image-container">
+            <img src="assets/chess-board-1.jpg" alt="">
+          </div>
+
+          <p>Beautiful Handcrafted Wooden Chess Set</p>
+          <button class="btn btn-primary-outline">Add to Cart</button>
+        </div>
+
+        <div class="chess-board-container">
+          <div class="chess-board-image-container">
+            <img src="assets/chess-board-2.jpg" alt="">
+          </div>
+
+          <p>Beautiful Metal Chess Sets</p>
+          <button class="btn btn-primary-outline">Add to Cart</button>
+        </div>
+
+        <div class="chess-board-container">
+          <div class="chess-board-image-container">
+            <img src="assets/chess-board-3.jpg" alt="">
+          </div>
+
+          <p>Beautiful Handcrafted Wooden Chess Set</p>
+          <button class="btn btn-primary-outline">Add to Cart</button>
+        </div>
+
+        <div class="chess-board-container">
+          <div class="chess-board-image-container">
+            <img src="assets/chess-board-4.jpg" alt="">
+          </div>
+
+          <p>Beautiful Metal Chess Set</p>
+          <button class="btn btn-primary-outline">Add to Cart</button>
+        </div>
+
+      </div>
+
+    </section>    
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section | bg-accent">
+      <h1 class="h1-enhance clr-neutral-100">Join With Us Now</h1>
+
+      <div class="grid">
+
+        <div class="grid-box">
+          
+          <div class="article-bullet-container">
+            <p class="bullet-point">01</p>
+            <div class="bullet-point-content">
+              <p>Learn to Play</p>
+              <p>Understand The Pieces - We'll show you how they move and will teach yoy how to play.</p>
+            </div>
+          </div>
+
+          <div class="article-bullet-container">
+            <p class="bullet-point">03</p>
+            <div class="bullet-point-content">
+              <p>Additional Items</p>
+              <p>The castle check website provides lots of tools to improve your chess game.</p>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="grid-box image-container">
+          <img src="assets/news-letter-image.jpg" alt="">
+        </div>
+        
+        <div class="grid-box">
+          
+          <div class="article-bullet-container">
+            <p class="bullet-point">02</p>
+            <div class="bullet-point-content">
+              <p>Tournament Analysis</p>
+              <p>Be cover all of the major chess Tournament from around the world.</p>
+            </div>
+          </div>
+
+          <div class="article-bullet-container">
+            <p class="bullet-point">04</p>
+            <div class="bullet-point-content">
+              <p>Online Practice</p>
+              <p>We will boost your confidence through online game practice with different country top chess player</p>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+
+      
+
+    </section>    
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+  </footer>
+
 
 </body>
 </html>

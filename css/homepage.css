@@ -1,0 +1,299 @@
+
+section {
+  min-height: 100vh;
+  padding: 2rem 3.5rem;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.hero-section h1 {
+  width: 750px;
+}
+
+.hero-section p {
+  margin-bottom: 3rem;
+  font-weight: var(--fw-900);
+  letter-spacing: 2px;
+  font-size: var(--fs-regular);
+}
+
+.btn-group {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.btn-group .btn {
+  padding: 0.8rem 5rem;
+}
+
+.hero-image-container {
+  width: 100%;
+  height: 700px;
+}
+
+.hero-section img {
+  object-fit: cover;
+  width: 100%;
+  object-position: top;
+  height: 100%;
+}
+
+/* Weekly Tournament Section */
+.weekly-tournament-section {
+
+  background-color: var(--clr-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.weekly-tournament-section h1 {
+  letter-spacing: 3px;
+}
+
+.weekly-tournament-section .sub-title {
+  margin-bottom: 3rem;
+  color: var(--clr-neutral-100);
+  letter-spacing: 2px;
+  font-size: var(--fs-regular);
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+}
+
+.grid-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 1rem;
+}
+
+.chess-box {
+  height: 60vh;
+  border: 1px solid black;
+  padding: 1rem;
+  cursor: pointer;
+  transition: padding 300ms;
+}
+
+.chess-box:hover {
+  padding: 0;
+}
+
+.chess-box__container {
+  height: 100%;
+  position: relative;
+}
+
+.chess-box__container img {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  object-position: center;
+  opacity: 0.9;
+}
+
+.chess-box__weekly-content {
+  z-index: 99999;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: var(--fw-900);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chess-box__week-content__weekly-article {
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-medium);
+  width: 70%;
+}
+
+.chess-box__week-content__weekly-schedule {
+  font-size: var(--fs-small);
+  color: var(--clr-neutral-200);
+}
+
+.weekly-tournament-section .btn {
+  padding: 1rem 3rem;
+}
+
+/* Featured Section */
+.featured-section h1 {
+  letter-spacing: 3px;
+}
+
+.featured__nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured__nav-links ul {
+  display: flex;
+  gap: 2rem;
+}
+
+
+.featured__nav-links ul li a {
+  color: var(--clr-neutral-900);
+  font-size: var(--fs-small);
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.featured__nav-links ul li .selected {
+  color: var(--clr-accent);
+}
+
+.featured__nav-links ul li .selected::before {
+  content: '';
+  width: 100%;
+  border-bottom: 2px solid var(--clr-neutral-900);
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Add this line to ensure the pseudo-element starts from the left */
+}
+
+.featured__nav-links ul li a:not(.selected)::before {
+  content: '';
+  width: 0;
+  border-bottom: 2px solid var(--clr-neutral-900);
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Add this line to ensure the pseudo-element starts from the left */
+  transition: width 0.3s; /* Add a transition for a smooth effect */
+}
+
+.featured__nav-links ul li a:not(.selected):hover::before {
+  width: 100%;
+}
+
+.chessboard-set-container {
+  margin-top: 3.5rem;
+  height: 100%;
+}
+
+.grid-4 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.chess-board-container {  
+  padding: 2.5rem 5rem;
+  border: 1px solid var(--clr-neutral-900);
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.chess-board-image-container {
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.chess-board-image-container img {
+  object-fit: cover;
+  width: 100%;
+  background-position: center;
+}
+
+.chess-board-container p {
+  width: 75%;
+
+  text-transform: uppercase;
+  font-weight: var(--fw-900);
+  font-size: var(--fs-medium);
+  letter-spacing: 3px;
+}
+
+.chess-board-container .btn {
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+}
+
+/* NewsLetter Section */
+.newsletter-section .grid {
+  min-height: 300px;
+  gap: 1rem;
+}
+
+.newsletter-section .grid {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.newsletter-section .grid-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.newsletter-section .grid-box > * {
+  flex: 1;
+}
+
+.newsletter-section .grid .grid-box.image-container {
+  overflow: hidden;
+  border-radius: 40%;
+  
+}
+
+.article-bullet-container {
+  display: flex;
+  gap: .5rem;
+  /* align-items: start; */
+  justify-content: center;
+  align-items: start;
+}
+
+.article-bullet-container .bullet-point {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-accent);
+  padding: 0.5rem;
+  border-radius: 100%;
+  width: 50px;
+  text-align: center;
+  
+
+  font-weight: var(--fw-900);
+  letter-spacing: 2px;
+
+
+  align-self: flex-start;
+}
+
+.bullet-point-content p {
+  color: var(--clr-neutral-100);
+}
+
+.bullet-point-content p:first-child {
+  font-size: calc(var(--fs-medium) + 0.5rem);
+
+  font-weight: var(--fw-900);
+  letter-spacing: 2px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.bullet-point-content p:last-child {
+  font-size: calc(var(--fs-medium) - 0.2rem);
+}

@@ -1,0 +1,75 @@
+
+/* Header CSS */
+
+:root {
+
+  /* Font Color */
+  --clr-nav-links-primary: var(--clr-secondary);
+  --clr-nav-links-accent: var(--clr-accent);
+
+}
+
+.header {
+  padding: 2rem 3.5rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+}
+
+.navigation::before {
+  content: '';
+  width: 100%;
+  border-bottom: 1px solid var(--clr-neutral-900);
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+}
+
+.navigation__nav-logo {
+  width: 190px;
+  cursor: pointer;
+}
+
+.navigation__nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navigation__nav-links li {
+  padding: 1rem 1.5rem;
+}
+
+.navigation__nav-link {
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.3s;
+  text-transform: uppercase;
+
+  font-size: var(--fs-small);
+  font-weight: var(--fw-500);
+  color: var(--clr-nav-links-primary);
+}
+
+.navigation__nav-link:hover {
+  color: var(--clr-nav-links-accent);
+}
+
+.navigation__nav-link::before {
+  content: '';
+  width: 0;
+  border-bottom: 2px solid var(--clr-neutral-900);
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Add this line to ensure the pseudo-element starts from the left */
+  transition: width 0.3s; /* Add a transition for a smooth effect */
+}
+
+.navigation__nav-link:hover::before {
+  width: 100%;
+}
